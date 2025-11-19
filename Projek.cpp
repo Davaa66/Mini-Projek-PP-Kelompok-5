@@ -29,8 +29,26 @@ void tambahTugas() {
     }
 }
 
-// BAgian 2: Tampilkan Tugas
+// Bagian 2: Tampilkan Tugas
 void tampilkanTugas() {
+    if(jumlahTugas == 0){
+        cout << "Tidak ada tugas yang tersedia" << endl;
+        return;
+    }
+    cout << "\n===== DAFTAR TUGAS =====\n" << endl;
+    for (int i = 0; i < jumlahTugas; i++){
+        cout << "Tugas " << (i + 1) << endl;
+        cout << "Nama : " << namaTugas[i] << endl;
+        cout << "Deadline : " << deadline[i] << endl;
+        cout << "Prioritas : " << prioritas[i] << endl;
+        cout << "Status : ";
+        if (statusTugas[i] == true){
+            cout << "Selesai" << endl;
+        } else {
+            cout << "Belum Selesai" << endl;
+        }
+        cout << "------------------------" << endl;
+    }
 }
 
 // Bagian 3: Ubah status tugas
